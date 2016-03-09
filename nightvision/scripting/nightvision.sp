@@ -19,7 +19,7 @@ public Plugin:myinfo =
 	author = AUTHOR,
 	description = "CS:GO Night Vision",
 	version = VERSION,
-	url = "https://www.team-secretforce.com"
+	url = "https://www.ausgo-network.com"
 };
 
 // Command
