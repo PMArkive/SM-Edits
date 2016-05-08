@@ -2,7 +2,7 @@
 #include <sdktools>
 #include <sdktools_sound>
 #define VERSION "1.0"
-#define AUTHOR "TummieTum, modified for ausgo by myk"
+#define AUTHOR "TummieTum, modified for AusGO by myk"
 #define MAX_FILE_LEN 80
 
 // CVAR Handles
@@ -10,7 +10,7 @@ new Handle:cvarnven = INVALID_HANDLE;
 new Handle:cvarnvspawn = INVALID_HANDLE;
 new Handle:cvarnvonoff = INVALID_HANDLE;
 
-// Basic Information (Do not change it)
+// Basic Information
 public Plugin:myinfo =
 {
 	name = "[AusGO] Night Vision Goggles",
