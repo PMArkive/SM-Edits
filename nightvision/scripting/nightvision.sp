@@ -56,7 +56,7 @@ public Action:PlayerSpawn(Handle:event, const String:name[], bool:dontBroadcast)
 	// Check Convar & Spawnmsg
 	if (GetConVarInt(cvarnvspawn) == 1)
 	{	
-		PrintToChat(client,"\x0BTIMER \x01| Type \x03!nvg \x01to toggle \x03nightvision\x01.");
+		PrintToChat(client," \x0BTIMER \x01| Type \x03!nvg \x01to toggle \x03nightvision\x01.");
 	}
 	
 }
@@ -73,7 +73,7 @@ public Action:Command_nightvision(client, args)
     			SetEntProp(client, Prop_Send, "m_bNightVisionOn", 1);
     			if (GetConVarInt(cvarnvonoff) == 1)
     			{
-    			PrintToChat(client,"\x0BTIMER \x01| Night Vision \x03enabled\x01.");
+    			PrintToChat(client," \x0BTIMER \x01| Night Vision \x03enabled\x01.");
     			}
 			}
 			else
@@ -81,7 +81,7 @@ public Action:Command_nightvision(client, args)
     			SetEntProp(client, Prop_Send, "m_bNightVisionOn", 0);
     			if (GetConVarInt(cvarnvonoff) == 1)
     			{
-    			PrintToChat(client,"\x0BTIMER \x01| Night Vision \x03disabled\x01.");
+    			PrintToChat(client," \x0BTIMER \x01| Night Vision \x03disabled\x01.");
     			}
     		}
     	}
