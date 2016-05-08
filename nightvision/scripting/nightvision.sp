@@ -2,7 +2,7 @@
 #include <sdktools>
 #include <sdktools_sound>
 #define VERSION "1.0"
-#define AUTHOR "TummieTum, modified for AusGO by myk"
+#define AUTHOR "TummieTum, modified for ausgo by myk"
 #define MAX_FILE_LEN 80
 
 // CVAR Handles
@@ -13,7 +13,7 @@ new Handle:cvarnvonoff = INVALID_HANDLE;
 // Basic Information (Do not change it)
 public Plugin:myinfo =
 {
-	name = "Night Vision Goggles",
+	name = "[AusGO] Night Vision Goggles",
 	author = AUTHOR,
 	description = "CS:GO Night Vision",
 	version = VERSION,
@@ -39,7 +39,7 @@ public OnPluginStart()
 	CreateConVar("sm_nightvision_version", VERSION, "Plugin info", FCVAR_DONTRECORD|FCVAR_NOTIFY);
 	
 	//Generate
-	AutoExecConfig(true, "Night_Vision_TummieTum");
+	AutoExecConfig(true, "plugin.nightvision");
 	 	
 }
 
@@ -56,7 +56,7 @@ public Action:PlayerSpawn(Handle:event, const String:name[], bool:dontBroadcast)
 	// Check Convar & Spawnmsg
 	if (GetConVarInt(cvarnvspawn) == 1)
 	{	
-		PrintToChat(client," \x0BTIMER \x01| Type \x03!nvg \x01to enable \x03NV.");
+		PrintToChat(client,"\x0BTIMER \x01| Type \x03!nvg \x01to toggle \x03nightvision\x01.");
 	}
 	
 }
@@ -73,7 +73,7 @@ public Action:Command_nightvision(client, args)
     			SetEntProp(client, Prop_Send, "m_bNightVisionOn", 1);
     			if (GetConVarInt(cvarnvonoff) == 1)
     			{
-    			PrintToChat(client," \x0BTIMER \x01| Night Vision \x03enabled.");
+    			PrintToChat(client,"\x0BTIMER \x01| Night Vision \x03enabled\x01.");
     			}
 			}
 			else
@@ -81,7 +81,7 @@ public Action:Command_nightvision(client, args)
     			SetEntProp(client, Prop_Send, "m_bNightVisionOn", 0);
     			if (GetConVarInt(cvarnvonoff) == 1)
     			{
-    			PrintToChat(client," \x0BTIMER \x01| Night Vision \x03disabled.");
+    			PrintToChat(client,"\x0BTIMER \x01| Night Vision \x03disabled\x01.");
     			}
     		}
     	}
