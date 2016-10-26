@@ -7,7 +7,7 @@ new String:sql_selectMaps[] = "SELECT map FROM mapzones WHERE type = 0 GROUP BY 
 public Plugin:myinfo = 
 {
 	name = "Maplist Helper",
-	author = "Zipcore editted by myk",
+	author = "Zipcore, edit by myk",
 	description = "Re-writes maplist.txt and mapcycle.txt with valid maps",
 	version = "1.0"
 }
